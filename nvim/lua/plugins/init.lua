@@ -221,6 +221,6 @@ return require('packer').startup(function()
 
 	use({ "fgheng/winbar.nvim", requires = "SmiteshP/nvim-navic", config = 'require("plugins.configs.winbar")' })
 
-	use({ 'sunjon/shade.nvim', event = "BufRead", config = 'require("plugins.configs.shade")' })
+	-- use({ 'sunjon/shade.nvim', event = "BufRead", config = 'require("plugins.configs.shade")' })
 
 end)

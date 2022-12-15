@@ -1,0 +1,27 @@
+cd Documnets/University/najjarDataStruct
+git status
+git commit -m "Added salam.txt"
+git push origin main
+git rm salam.txt
+git status
+git commit -m "Deleted salam.txt"
+git push origin main
+git pull
+ls
+git rm salam.txt
+git status
+git commit -m "Deleted salam.txt from pc"
+git push
+cd
+sudo mount /dev/sda2 Data/InsideHDD
+clear
+tb
+clear
+nvim
+cd .config/nvim/lua/globals
+nvim remaps.lua
+cd ..
+cd plugins
+cd configs
+lc
+nvim
