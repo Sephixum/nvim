@@ -1,8 +1,9 @@
-vim.g.vimtex_view_method = "zathura"
-vim.g.maplocalleader = ' '
-vim.g.vimtex_view_general_viewer = "zathura"
-vim.g.vimtex_view_forward_search_on_start = false
-vim.g.vimtex_toc_config = {
+local g = vim.g
+g.vimtex_view_method = "zathura"
+g.maplocalleader = ' '
+g.vimtex_view_general_viewer = "zathura"
+g.vimtex_view_forward_search_on_start = false
+g.vimtex_toc_config = {
     mode = 1,
     fold_enable = 0,
     hide_line_numbers = 1,
