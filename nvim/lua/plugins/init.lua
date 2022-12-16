@@ -210,6 +210,7 @@ return require('packer').startup(function()
 		run = function()
 			vim.fn["mkdp#util#install"]()
 		end,
+		config = 'require("plugins.configs.markdownprev")'
 	})
 
 	use('dstein64/vim-startuptime')

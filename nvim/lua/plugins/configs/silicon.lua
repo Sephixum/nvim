@@ -4,7 +4,8 @@ local colors = pywal_core.get_colors()
 
 silicon.setup({
 	font = "JetBrains Mono",
-	bgColor = colors.color2,
+	-- bgColor = colors.color2,
+	bgColor = "#6e6e6e",
 	roundCorner = true,
 })
 -- vim.keymap.set('n', '<Leader>s', function() silicon.visualise_cmdline({ to_clip = true }) end)
