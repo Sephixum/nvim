@@ -1,7 +1,7 @@
 
 # <div align="center"> Neovim config
 
-<font size="15"> 
+<font size="6"> 
 
 This config is made to have a fast and fully functioning neovim ready to be used .
 
