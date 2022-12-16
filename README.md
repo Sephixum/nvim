@@ -1,7 +1,21 @@
+
 # <div align="center"> Neovim config
+
+<font size="6"> 
+
+This config is made to have a fast and fully functioning neovim ready to be used .
+
+</font>
+
 ## Showcase
+![ start ](Screenshots/start.png)
+![ fuzzy ](Screenshots/fuzzy.png)
+![ multi ](Screenshots/multi.png)
+![ md ](Screenshots/md.png)
+![ tex ](Screenshots/tex.png)
 
 ## Plugins
+
 <font size="5">
 
 - pywal.nvim as color scheme
