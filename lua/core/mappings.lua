@@ -35,8 +35,8 @@ keymap('n', '<A-j>', '<Esc>:m .+1<CR>==gi', opts)
 keymap('n', '<A-k>', '<Esc>:m .-2<CR>==gi', opts)
 
 -- bufferline
-keymap('n', '<leader>ts', '<CMD>BufferLinePickClose<CR>',
-	{ noremap = true, silent = true, desc = 'Close the picked buffer' })
+-- keymap('n', '<leader>ts', '<CMD>BufferLinePickClose<CR>',
+-- 	{ noremap = true, silent = true, desc = 'Close the picked buffer' })
 
 
 -- trouble
@@ -55,9 +55,7 @@ vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
 vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
 	{ silent = true, noremap = true }
 )
-vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
-	{ silent = true, noremap = true }
-)
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
 
 
 keymap('n', '<S-l>', '<CMD>BufferLineCycleNext<CR>', { noremap = true, silent = true })
