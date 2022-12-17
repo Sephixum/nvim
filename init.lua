@@ -6,7 +6,10 @@ require('core.mappings')
 require('impatient')
 
 -- Load Pywal colors
-require('plugins.configs.pywal')
+-- require('plugins.configs.pywal')
+
+-- one dark
+require('plugins.configs.onedark')
 
 -- Load the packer plugins
 require('plugins')

@@ -170,7 +170,10 @@ return require('packer').startup(function()
 
 	use('williamboman/mason-lspconfig.nvim')
 
-	use('navarasu/onedark.nvim')
+	use({
+		'navarasu/onedark.nvim',
+		config = 'require("plugins.configs.onedark")'
+	})
 
 	use('matze/vim-move')
 
