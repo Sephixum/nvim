@@ -4,14 +4,14 @@ local opts = { noremap = true, silent = true }
 keymap('i', 'jk', '<ESC>', { noremap = true })
 
 -- Standard Operations
-keymap('n', '<C-s>', '<cmd>w<cr>', { noremap = true, silent = false, desc = 'Save'})
-keymap('n', '<leader>q', '<cmd>q<cr>', { noremap = true, silent = false, desc = 'Quit'})
+keymap('n', '<C-s>', '<cmd>w<cr>', { noremap = true, silent = false, desc = 'Save' })
+keymap('n', '<leader>q', '<cmd>q<cr>', { noremap = true, silent = false, desc = 'Quit' })
 
 -- Buffdelete
 vim.keymap.set('n', '<leader>c', function() require("bufdelete").bufdelete(0, false) end)
 
 -- nvim tree
-keymap('n', '<C-n>', ':NvimTreeToggle<cr>', { noremap = true })
+keymap('n', '<leader>e', ':NvimTreeToggle<cr>', { noremap = true })
 
 -- Window navigations
 keymap('n', '<C-h>', '<C-w>h', opts)
@@ -38,6 +38,28 @@ keymap('n', '<A-k>', '<Esc>:m .-2<CR>==gi', opts)
 keymap('n', '<leader>ts', '<CMD>BufferLinePickClose<CR>',
 	{ noremap = true, silent = true, desc = 'Close the picked buffer' })
 
+
+-- trouble
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+	{ silent = true, noremap = true }
+)
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+	{ silent = true, noremap = true }
+)
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
+	{ silent = true, noremap = true }
+)
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
+	{ silent = true, noremap = true }
+)
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
+	{ silent = true, noremap = true }
+)
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
+	{ silent = true, noremap = true }
+)
+
+
 keymap('n', '<S-l>', '<CMD>BufferLineCycleNext<CR>', { noremap = true, silent = true })
 keymap('n', '<S-h>', '<CMD>BufferLineCyclePrev<CR>', { noremap = true, silent = true })
 keymap('n', ']b', '<CMD>BufferLineMoveNext<CR>',
@@ -61,11 +83,12 @@ wk.register({
 	},
 	['<leader>'] = {
 		w = { '<cmd>write<cr>', 'Write current buffer' },
-		r = { name = '+RunCode' },
+		x = { name = '+Show bugs' },
 		q = { '<cmd>quit<cr>', 'Exit current buffer' },
 		e = { '<cmd>NvimTreeToggle<cr>', 'Toggle explorer' },
-		f = { '<cmd>Format<cr>', 'Format the current buffer'},
-		s = { function() require('silicon').visualise_cmdline({ to_clip = true }) end, "copy Code to clipboard"},
-		c = {'close buffer'},
+		f = { '<cmd>Format<cr>', 'Format the current buffer' },
+		s = { function() require('silicon').visualise_cmdline({ to_clip = true }) end, "Copy code snap to clipboard" },
+		c = { 'close buffer' },
 	},
+
 })

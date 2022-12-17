@@ -1,6 +1,7 @@
-require("toggleterm").setup{
+require("toggleterm").setup {
+
 	direction = 'float',
-	open_mapping = [[<c-t>]],
+	open_mapping = [[<a-1>]],
 	float_opts = {
 		border = 'curved',
 	},

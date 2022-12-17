@@ -176,13 +176,7 @@ return require('packer').startup(function()
 
 	use({
 		'folke/which-key.nvim',
-		config = function()
-			require("which-key").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
-		end,
+		config = 'require("plugins.configs.whichkey")'
 	})
 
 	-- use { 'feline-nvim/feline.nvim' }
@@ -223,5 +217,11 @@ return require('packer').startup(function()
 	use({ "fgheng/winbar.nvim", requires = "SmiteshP/nvim-navic", config = 'require("plugins.configs.winbar")' })
 
 	-- use({ 'sunjon/shade.nvim', event = "BufRead", config = 'require("plugins.configs.shade")' })
+
+	use({
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = 'require("plugins.configs.trouble")'
+	})
 
 end)
