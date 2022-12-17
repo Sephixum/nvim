@@ -128,7 +128,7 @@ return require('packer').startup(function()
 	use { "hrsh7th/cmp-path", after = "nvim-cmp" }
 	use { "hrsh7th/cmp-buffer", after = "nvim-cmp" }
 	use { "hrsh7th/cmp-nvim-lsp", after = "nvim-cmp" }
-	use { 'saadparwaiz1/cmp_luasnip', after = "nvim-cmp", config = 'require("plugins.configs.luasnip")' }
+	use { 'saadparwaiz1/cmp_luasnip', after = "nvim-cmp", config = 'require("plugins.configs.cmp")' }
 	use { 'octaltree/cmp-look', after = "nvim-cmp" }
 	use { 'hrsh7th/cmp-calc', after = "nvim-cmp" }
 	use { 'f3fora/cmp-spell', after = "nvim-cmp" }
@@ -226,5 +226,7 @@ return require('packer').startup(function()
 		requires = "kyazdani42/nvim-web-devicons",
 		config = 'require("plugins.configs.trouble")'
 	})
+
+	use({ "RRethy/vim-illuminate" })
 
 end)

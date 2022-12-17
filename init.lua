@@ -8,7 +8,7 @@ require('impatient')
 -- Load Pywal colors
 -- require('plugins.configs.pywal')
 
--- one dark
+-- onedark
 require('plugins.configs.onedark')
 
 -- Load the packer plugins
