@@ -1,0 +1,8 @@
+cd Documnets/University/najjarDataStruct
+cd exercises/Stack
+nvim InToPost.cpp
+nvim InToPost.cpp
+cd 
+cd .config/nvim/lua/plugins
+nvim
+ranger

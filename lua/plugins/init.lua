@@ -201,6 +201,11 @@ return require('packer').startup(function()
 		requires = { "nvim-lua/plenary.nvim" },
 		config = 'require("plugins.configs.silicon")'
 	})
+	-- use({
+	-- 	'krivahtoo/silicon.nvim',
+	-- 	run = './install.sh',
+	-- 	config = 'require("plugins.configs.silicon")'
+	-- })
 
 	use({
 		"iamcco/markdown-preview.nvim",

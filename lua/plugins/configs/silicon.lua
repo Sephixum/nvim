@@ -1,10 +1,8 @@
-local silicon = require("silicon")
-
-silicon.setup({
-	theme = "auto",
-	font = "JetBrains Mono",
+vim.g.colors_name = 'pywal'
+require('silicon').setup({
+	theme = 'auto',
+	font = 'JetBrains Mono',
 	-- bgColor = colors.color2,
-	-- bgColor = "#6e6e6e",
-	bgColor = vim.g.terminal_color_6,
+	bgColor = '#6e6e6e',
 	roundCorner = true,
 })

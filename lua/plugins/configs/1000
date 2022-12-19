@@ -1,0 +1,9 @@
+cd .config/nvim/lua/plugins/configs
+nvim silicon.lua
+cd .config/nvim/lua/plugins/configs
+ranger
+ranger
+ranger
+ranger
+clear
+ranger
