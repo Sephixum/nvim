@@ -87,6 +87,7 @@ wk.register({
 		f = { '<cmd>Format<cr>', 'Format the current buffer' },
 		s = { function() require('silicon').visualise_cmdline({ to_clip = true }) end, "Copy code snap to clipboard" },
 		c = { 'close buffer' },
+		o = { '<cmd>SymbolsOutline<cr>', 'Open/Close code outline' },
 	},
 
 })

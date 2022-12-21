@@ -234,4 +234,8 @@ return require('packer').startup(function()
 
 	use({ "RRethy/vim-illuminate" })
 
+	use({
+		"simrat39/symbols-outline.nvim",
+		config = 'require("plugins.configs.outline")',
+	})
 end)
