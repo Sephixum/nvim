@@ -17,6 +17,10 @@ require("formatter").setup {
       require("formatter.filetypes.cpp").clangformat,
     },
 
+    cs = {
+      require("formatter.filetypes.cs").clangformat,
+    },
+
     python = {
       require("formatter.filetypes.python").autopep8,
     },
