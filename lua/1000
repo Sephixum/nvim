@@ -1,0 +1,30 @@
+clear
+cd nvim
+clear
+ranger
+ranger
+cd
+clear
+cd Documnets/University/najjarDataStruct/exercises/Queue
+lc
+nvim Queue.cpp
+clear
+cd
+cd .config/nvim/lua/plugins/configs
+nvim outline.lua
+nvim outline.lua
+nvim outline.lua
+ranger
+cd ../../..
+git status
+git status init.lua
+nvim init.lua
+git status
+cd lua
+git status
+git add .
+git status
+git commit -m "Updated"
+git status
+git push
+clear

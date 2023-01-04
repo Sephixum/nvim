@@ -7,3 +7,25 @@ ranger
 ranger
 clear
 ranger
+mkvirtcam
+cd .config/nvim/lua/plugins/configs
+nvim outline.lua
+git status
+git add outline.lua
+git commit -m "Updated"
+git push
+paci firefox
+cd .config/nvim
+cd lua/plugins/configs
+clear
+ranger
+nvim
+cd .config/nvim/lua/plugins
+nvim init.lua
+nvim init.lua
+cd configs
+nvim marks.lua
+nvim marks.lua
+nvim marks.lua
+nvim marks.lua
+nvim marks.lua

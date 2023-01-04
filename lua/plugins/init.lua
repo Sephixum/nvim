@@ -238,4 +238,9 @@ return require('packer').startup(function()
 		"simrat39/symbols-outline.nvim",
 		config = 'require("plugins.configs.outline")',
 	})
+
+	use({
+		'chentoast/marks.nvim',
+		config = 'require("plugins.configs.marks")'
+	})
 end)

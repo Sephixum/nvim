@@ -1,0 +1,83 @@
+cd University
+lc
+cd ..
+cd projects
+cd tamrin
+nvim kim1.cpp
+clear
+nvim kim1.cpp
+cd
+cd .config/nvim
+nvim README.md
+cd
+cd Documnets/University
+cd ~/Documnets/projects/tamrin
+nvim kim1.cpp
+cd
+cd .config/nvim/
+git status
+git add lua/plugins/configs/lualine.lua
+git add plugin/packer_compiled.lua
+git status
+git commit -m "Updates"
+git status
+git push
+clear
+cd ..
+cd nvim
+git pull
+nvim
+nvim
+cd .config/nvim
+git status
+git add init.lua lua/plugins/configs/formatter.lua
+git stash
+git status
+git push
+git status
+git push
+ranger
+nvim
+nvim init.lua
+nvim init.lua
+nvim init.lua
+git status
+git add init.lua
+git status
+git commit -m "Added init.lua"
+git push
+ranger
+cd .config/nvim/lua
+ranger
+cd ..
+git status
+git add lua/plugins/configs/formatter.lua
+git status
+ranger
+git status
+git add lua/plugins/configs/formatter.lua
+git status
+git commit -m "Added cs file types"
+git status
+git push
+git status
+git status -s
+ranger
+git status
+pacman -Qe | grep Kernel
+pacman -Qe | grep linux
+sudo pacman -Sy linux
+pacman -Qe | grep linux
+sudo pacman -Sy linux-headers
+pacman -Qe | grep linux
+pacman -Qe | grep omni
+paci archlinux-keyring
+pacman -Qe | grep omni
+pacman -Qe | grep linux
+cd .config/nvim
+git status
+git add lua/core/mappings.lua
+git status
+git commit -m "Updated"
+git status
+git push
