@@ -4,6 +4,6 @@ require 'shade'.setup({
 	keys = {
 		brightness_up   = '<C-Up>',
 		brightness_down = '<C-Down>',
-		toggle          = '<Leader>s',
+		toggle          = '<Leader>;',
 	}
 })
