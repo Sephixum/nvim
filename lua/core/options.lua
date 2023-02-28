@@ -20,3 +20,5 @@ vim.g.neovide_padding_bottom=10
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 
 vim.cmd [[autocmd BufWritePre <buffer> GuessIndent]]
+
+vim.cmd [[autocmd InsertLeave <buffer> lua vim.lsp.codelens.refresh()]]
