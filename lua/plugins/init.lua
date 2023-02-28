@@ -223,8 +223,13 @@ return require('packer').startup(function()
 	-- })
 
 	use({ "fgheng/winbar.nvim", requires = "SmiteshP/nvim-navic", config = 'require("plugins.configs.winbar")' })
+	-- use {
+	-- 	"SmiteshP/nvim-navic",
+	-- 	requires = "neovim/nvim-lspconfig"
+	-- }
 
-	use({ 'sunjon/shade.nvim', event = "BufRead", config = 'require("plugins.configs.shade")' })
+	-- use({ 'sunjon/shade.nvim', event = "BufRead", config = 'require("plugins.configs.shade")' })
+	-- use({ 'sunjon/shade.nvim' })
 
 	use({
 		"folke/trouble.nvim",
@@ -232,7 +237,9 @@ return require('packer').startup(function()
 		config = 'require("plugins.configs.trouble")'
 	})
 
-	use({ "RRethy/vim-illuminate" })
+	use({   "RRethy/vim-illuminate",
+		config = 'require("plugins.configs.illuminate")',
+	})
 
 	use({
 		"simrat39/symbols-outline.nvim",

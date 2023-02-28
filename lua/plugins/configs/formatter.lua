@@ -18,7 +18,7 @@ require("formatter").setup {
     },
 
     cs = {
-      require("formatter.filetypes.cs").clangformat,
+      require("formatter.filetypes.cs").csharpier,
     },
 
     python = {

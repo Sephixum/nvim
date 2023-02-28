@@ -29,3 +29,5 @@ nvim marks.lua
 nvim marks.lua
 nvim marks.lua
 nvim marks.lua
+cd .config/nvim/lua/plugins/configs
+ranger

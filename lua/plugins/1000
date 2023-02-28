@@ -6,3 +6,32 @@ cd
 cd .config/nvim/lua/plugins
 nvim
 ranger
+cd .config/nvim/lua/plugins
+nvim init.lua
+nvim init.lua
+nvim init.lua
+nvim init.lua
+cd configs
+lc
+nvim shade.lua
+clear
+nvim shade.lua
+clear
+cd
+cd Documnets/University/najjarDataStruct/Lesson-pdfs
+lc
+nvimt test.cpp
+nvim test.cpp
+cd
+cd .config/nvim/lua/plugins
+ranger
+clear
+pacr neovim-nightly-bin
+paci neovim
+nvim
+clear
+cd
+cd Documnets/University/najjarDataStruct/Lesson-pdfs
+cd
+cd .config/nvim/lua/plugins
+ranger
