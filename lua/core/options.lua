@@ -21,4 +21,9 @@ vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 
 vim.cmd [[autocmd BufWritePre <buffer> GuessIndent]]
 
-vim.cmd [[autocmd InsertLeave <buffer> lua vim.lsp.codelens.refresh()]]
+-- vim.cmd [[autocmd InsertLeave <buffer> lua vim.lsp.codelens.refresh()]]
+-- vim.cmd [[autocmd InsertLeave <buffer> lua vim.lsp.code_lens_refresh()]]
+-- vim.cmd [[autocmd  InsertLeave <buffer> lua vim.lsp.codelens.refresh() FileType=cs]]
+-- vim.cmd([[
+--   autocmd InsertLeave *.cs lua vim.lsp.codelens.refresh()
+-- ]])

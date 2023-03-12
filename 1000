@@ -81,3 +81,17 @@ git status
 git commit -m "Updated"
 git status
 git push
+cd Documnets/projects/tamrin
+nvim latex.cpp
+clear
+cd ..
+lc
+csmkcon -o latexexercise
+cd latexexercise
+lc
+nvim Program.cs
+nvim Program.cs
+cd
+cd .config/nvim/
+nvim init.lua
+ranger

@@ -136,7 +136,7 @@ return require('packer').startup(function()
 	use { 'onsails/lspkind.nvim' }
 	use { 'hrsh7th/cmp-cmdline', after = "nvim-cmp" }
 
-	use({ 'rafamadriz/friendly-snippets', event = "InsertCharPre" })
+	use({ 'rafamadriz/friendly-snippets', event = "InsertCharPre", config = 'require("plugins.configs.friendlysnippets")' })
 
 	use {
 		'windwp/nvim-autopairs',
