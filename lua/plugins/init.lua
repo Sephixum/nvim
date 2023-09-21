@@ -45,14 +45,17 @@ local plugins = {
   {
     "nimaaskarian/pywal16.nvim",
     name = "pywal",
-    dependencies = {
-      {
-        "lukas-reineke/indent-blankline.nvim",
-        config = function()
-          require("plugins.configs.indent-blankline")
-        end,
-      },
-    }
+  },
+
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("plugins.configs.indent-blankline")
+    end,
+  },
+
+  {
+    "Darazaki/indent-o-matic",
   },
 
   {
@@ -116,8 +119,7 @@ local plugins = {
     version = "*",
     event = "VeryLazy",
     config = function()
-      require("nvim-surround").setup({
-      })
+      require("nvim-surround").setup()
     end,
   },
 
@@ -154,13 +156,6 @@ local plugins = {
         end,
       },
     }
-  },
-
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    config = function()
-      require("plugins.configs.null-ls")
-    end,
   },
 
   { "folke/lsp-colors.nvim" },
@@ -215,12 +210,11 @@ local plugins = {
   { "rcarriga/nvim-notify" },
 
   {
-    "narutoxy/silicon.lua",
+    "0oAstro/silicon.lua",
     config = function()
       require("plugins.configs.silicon")
     end,
     keys = { "<leader>", "s" }
-
   },
 
   {
@@ -253,11 +247,6 @@ local plugins = {
   },
 
   {
-    "weilbith/nvim-code-action-menu",
-    cmd = "CodeActionMenu",
-  },
-
-  {
     "max397574/better-escape.nvim",
     config = function()
       require("better_escape").setup()
@@ -274,14 +263,10 @@ local plugins = {
 
   {
     "phaazon/hop.nvim",
-    lazy = true,
+    event = "VeryLazy",
     config = function()
       require("plugins.configs.hop")
     end,
-  },
-
-  {
-    "Darazaki/indent-o-matic",
   },
 
   {
@@ -293,26 +278,18 @@ local plugins = {
 
   {
     'kevinhwang91/nvim-ufo',
+    config = function()
+      require("plugins.configs.ufo")
+    end,
     dependencies = {
-      'kevinhwang91/promise-async',
+      { 'kevinhwang91/promise-async' },
       {
         "luukvbaal/statuscol.nvim",
         config = function()
-          local builtin = require("statuscol.builtin")
-          require("statuscol").setup({
-            relculright = true,
-            segments = {
-              { text = { builtin.foldfunc },      click = "v:lua.ScFa" },
-              { text = { "%s" },                  click = "v:lua.ScSa" },
-              { text = { builtin.lnumfunc, " " }, click = "v:lua.ScLa" },
-            },
-          })
+          require("plugins.configs.statuscol")
         end,
       }
     },
-    config = function()
-      require("plugins.configs.ufo")
-    end
   },
 
   {
@@ -346,21 +323,7 @@ local plugins = {
   {
     "aznhe21/actions-preview.nvim",
     config = function()
-      require("actions-preview").setup {
-        telescope = {
-          sorting_strategy = "ascending",
-          layout_strategy = "vertical",
-          layout_config = {
-            width = 0.8,
-            height = 0.9,
-            prompt_position = "top",
-            preview_cutoff = 20,
-            preview_height = function(_, _, max_lines)
-              return max_lines - 15
-            end,
-          },
-        },
-      }
+      require("plugins.configs.actions-preview")
     end,
   },
 }

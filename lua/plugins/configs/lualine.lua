@@ -72,13 +72,13 @@ navic.setup({
     Module        = " ",
     Namespace     = "󰌗 ",
     Package       = " ",
-    Class         = "󰌗 ",
+    Class         = " ",
     Method        = "󰆧 ",
     Property      = " ",
     Field         = " ",
     Constructor   = " ",
-    Enum          = "󰕘",
-    Interface     = "󰕘",
+    Enum          = "󰕘 ",
+    Interface     = "󰕘 ",
     Function      = "󰊕 ",
     Variable      = "󰆧 ",
     Constant      = "󰏿 ",
@@ -100,7 +100,7 @@ navic.setup({
     preference = nil,
   },
   highlight = true,
-  separator = " > ",
+  separator = " -> ",
   depth_limit = 0,
   depth_limit_indicator = "..",
   safe_output = true,
@@ -118,8 +118,10 @@ local config = {
     -- component_separators = { left = "", right = "" },
     component_separators = { left = " | ", right = " | " },
     section_separators = { left = "", right = "" },
-    -- disabled_filetypes = { "dashboard", "NvimTree", "Outline" },
-    disabled_filetypes = { "dashboard", "Outline" },
+    disabled_filetypes = {
+      statusline = { 'alpha' },
+      winbar = { 'NvimTree', 'alpha', 'dap-repl' },
+    },
     always_divide_middle = true,
     globalstatus = true
   },
@@ -156,42 +158,42 @@ local config = {
   extensions = {},
 }
 
-local function ins_left(component)
-  table.insert(config.sections.lualine_c, component)
-end
+-- local function ins_left(component)
+--   table.insert(config.sections.lualine_c, component)
+-- end
 
-ins_left {
-  function()
-    local type = cmake.get_build_type()
-    return " CMake: [" .. (type and type or "") .. "] "
-  end,
-  icon = "",
-  cond = function()
-    return cmake.is_cmake_project() and not cmake.has_cmake_preset()
-  end,
-  on_click = function(n, mouse)
-    if (n == 1) then
-      if (mouse == "l") then
-        vim.cmd("CMakeSelectBuildType")
-      end
-    end
-  end
-}
+-- ins_left {
+--   function()
+--     local type = cmake.get_build_type()
+--     return " CMake: [" .. (type and type or "") .. "] "
+--   end,
+--   icon = "",
+--   cond = function()
+--     return cmake.is_cmake_project() and not cmake.has_cmake_preset()
+--   end,
+--   on_click = function(n, mouse)
+--     if (n == 1) then
+--       if (mouse == "l") then
+--         vim.cmd("CMakeSelectBuildType")
+--       end
+--     end
+--   end
+-- }
 
-ins_left {
-  function()
-    return " Build "
-  end,
-  icon = '',
-  cond = cmake.is_cmake_project,
-  on_click = function(n, mouse)
-    if (n == 1) then
-      if (mouse == "l") then
-        vim.cmd("CMakeBuild")
-      end
-    end
-  end
-}
+-- ins_left {
+--   function()
+--     return " Build "
+--   end,
+--   icon = '',
+--   cond = cmake.is_cmake_project,
+--   on_click = function(n, mouse)
+--     if (n == 1) then
+--       if (mouse == "l") then
+--         vim.cmd("CMakeBuild")
+--       end
+--     end
+--   end
+-- }
 
 
 lualine.setup(config)
