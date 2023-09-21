@@ -238,6 +238,7 @@ local plugins = {
 
   {
     "SmiteshP/nvim-navic",
+    dependencies = "neovim/nvim-lspconfig",
   },
 
   {
@@ -308,7 +309,6 @@ local plugins = {
           })
         end,
       }
-
     },
     config = function()
       require("plugins.configs.ufo")

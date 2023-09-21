@@ -52,7 +52,6 @@ local location = {
   padding = 1,
 }
 
--- cool function for progress
 local progress = function()
   local current_line = vim.fn.line(".")
   local total_lines = vim.fn.line("$")
@@ -65,6 +64,52 @@ end
 local spaces = function()
   return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
+
+local navic = require('nvim-navic')
+navic.setup({
+  icons = {
+    File          = "󰈙 ",
+    Module        = " ",
+    Namespace     = "󰌗 ",
+    Package       = " ",
+    Class         = "󰌗 ",
+    Method        = "󰆧 ",
+    Property      = " ",
+    Field         = " ",
+    Constructor   = " ",
+    Enum          = "󰕘",
+    Interface     = "󰕘",
+    Function      = "󰊕 ",
+    Variable      = "󰆧 ",
+    Constant      = "󰏿 ",
+    String        = "󰀬 ",
+    Number        = "󰎠 ",
+    Boolean       = "◩ ",
+    Array         = "󰅪 ",
+    Object        = "󰅩 ",
+    Key           = "󰌋 ",
+    Null          = "󰟢 ",
+    EnumMember    = " ",
+    Struct        = "󰌗 ",
+    Event         = " ",
+    Operator      = "󰆕 ",
+    TypeParameter = "󰊄 ",
+  },
+  lsp = {
+    auto_attach = false,
+    preference = nil,
+  },
+  highlight = true,
+  separator = " > ",
+  depth_limit = 0,
+  depth_limit_indicator = "..",
+  safe_output = true,
+  click = false
+})
+
+local my_filename = require('lualine.components.filename'):extend()
+my_filename.apply_icon = require('lualine.components.filetype').apply_icon
+my_filename.icon_hl_cache = {}
 
 local config = {
   options = {
@@ -96,6 +141,18 @@ local config = {
     lualine_z = {},
   },
   tabline = {},
+  winbar = {
+    lualine_c = { {
+      my_filename, colored = true
+    },
+      {
+        'navic',
+        color_correction = nil,
+        navic_opts = nil
+      }
+    }
+  },
+  inactive_winbar = { lualine_a = { 'filename' } },
   extensions = {},
 }
 
