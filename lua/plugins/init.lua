@@ -138,7 +138,6 @@ local plugins = {
       { "onsails/lspkind.nvim" },
       { "hrsh7th/cmp-cmdline" },
       { "hrsh7th/cmp-nvim-lsp" },
-      { "" },
       {
         "windwp/nvim-autopairs",
         config = function()

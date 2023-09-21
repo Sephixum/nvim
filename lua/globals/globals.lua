@@ -36,13 +36,3 @@ vim.g.vimtex_view_method = 'zathura'
 vim.g.vimtex_quickfix_mode = 0
 vim.opt.conceallevel = 1
 vim.g.tex_conceal = 'abdmg'
-
--- Format on save
--- vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format({async = true})]]
-
--- vim.api.nvim_create_autocmd({ "InsertLeave" }, {
--- 	pattern = { "*.cs" },
--- 	callback = function()
--- 		vim.lsp.codelens.refresh()
--- 	end
--- })

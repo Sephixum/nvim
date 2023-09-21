@@ -86,7 +86,6 @@ wk.register({
   ["<leader>"] = {
     l = {
       name = "LSP",
-      -- a = { "<cmd>CodeActionMenu<cr>", "Code actions" },
       a = {
         function ()
         require("actions-preview").code_actions()
